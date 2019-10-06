@@ -10,4 +10,5 @@
     <color name="TextOne">#FFA6A6</color>
     <color name="TextTwo">#FFE7E7</color>
     <color name="Background">#333A46</color>
+    <color name="Button">#FFE5E5</color>
 </resources>
