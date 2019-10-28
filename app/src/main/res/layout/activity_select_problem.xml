@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectProblem">
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar2"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/Background"
+        app:navigationIcon="@drawable/shr_menu"
+        app:titleTextColor="#FFFFFF"
+        app:title="اختر نوع العطل">
+
+    </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Lin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/l1"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:layoutDirection="rtl"
+        android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tvPhoneModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/roboto_thin"
+            android:text="موديل  الجهاز:"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            android:textStyle="bold">
+
+        </TextView>
+    </LinearLayout>
+    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+        android:id="@+id/expLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Lin1"
+        android:layout_marginTop="10dp"
+        app:ael_expanded="false"
+        app:ael_duration="300"
+        app:ael_interpolator="accelerate"
+        app:ael_orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvExpLayoutMoblie"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                >
+
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+
+
+</RelativeLayout>
